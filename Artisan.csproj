@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackAsTool>true</PackAsTool>
+		<ToolCommandName>dotnet-artisan</ToolCommandName>
+		<PackageId>DotNetArtisan.CLI</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>enesxdev</Authors>
+		<Company>enesxdev</Company>
+		<Description>.NET projeleri için mimariyi koklayan akıllı kod üretim (Artisan) aracı.</Description>
+		<PackageTags>artisan;cli;scaffolding;cqrs;mediatr;onion;architecture</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Cli\Templates\" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<None Update="Cli\Templates\**\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>

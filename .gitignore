@@ -1,0 +1,17 @@
+## .NET Core ve Visual Studio Kalıntıları
+.vs
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+
+## VS Code Klasörleri
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+## İşletim Sistemi Dosyaları
+.DS_Store
+Thumbs.db
